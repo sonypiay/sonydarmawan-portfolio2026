@@ -1,0 +1,22 @@
+@use 'variables' as vars;
+
+.toastify-rounded {
+    @include vars.border-radius-medium();
+}
+
+.toastify-bg-primary {
+    background: vars.$bg-primary !important;
+    color: #ffffff !important;
+}
+.toastify-bg-success {
+    background: vars.$bg-success !important;
+    color: #ffffff !important;
+}
+.toastify-bg-danger {
+    background: vars.$bg-danger !important;
+    color: #ffffff !important;
+}
+.toastify-bg-warning {
+    background: vars.$bg-warning !important;
+    color: #ffffff !important;
+}

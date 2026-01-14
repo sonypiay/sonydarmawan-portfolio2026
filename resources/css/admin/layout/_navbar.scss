@@ -1,0 +1,218 @@
+@use '../components/variables' as vars;
+
+.navbar-container {
+    background-color: vars.$color-1;
+
+    .navbar-profile-container {
+        text-decoration: none;
+
+        .navbar-profile-info {
+            .nav-profile-name {
+                color: black;
+                @include vars.fontStyling(vars.$fontFamily, 16px, 700, white);
+            }
+
+            .nav-profile-subname {
+                @include vars.fontStyling(vars.$fontFamily, 14px, 400, white);
+            }
+        }
+
+        .navbar-icon-dropdown {
+            span {
+                margin-top: .1rem;
+                font-size: 20px;
+                color: black;
+            }
+        }
+    }
+
+    .navbar-dropdown {
+        border-radius: 0 0 5px 5px;
+        top: 80px !important;
+        border: none;
+        padding: 1rem;
+
+        ul.nav-dropdown {
+            li > a {
+                @include vars.fontStyling(vars.$fontFamily, 14px, 600, white);
+                padding: 6px 10px;
+                background-color: vars.$color-1;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: vars.$color-2;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-nav {
+    background-color: black;
+    border-right: 2px solid black;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+    ul.nav-list {
+        margin-top: 2rem;
+
+        li > a {
+            @include vars.fontStyling(vars.$fontFamily, 16px, 600, white);
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            span.las {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                background-color: vars.$color-1;
+                color: #ffffff;
+            }
+        }
+
+        li.uk-parent {
+            ul.uk-nav-sub {
+                li {
+                    padding-left: 30px;
+
+                    a {
+                        &:hover {
+                            background-color: transparent;
+                            color: vars.$color-1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+ul.nav-pagination {
+    li > a {
+        @include vars.fontStyling(vars.$fontFamily, 14px, 400, black);
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+
+        &:hover {
+            background-color: vars.$color-3;
+            color: #ffffff;
+            border-color: vars.$color-3;
+        }
+    }
+
+    li > span {
+        @include vars.fontStyling(vars.$fontFamily, 14px, 400, black !important);
+    }
+
+    li.disabled > a {
+        background-color: transparent;
+        color: #999999;
+        border-color: #dddddd;
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+}
+
+.form-nav-tab {
+    background-color: #E2E6F9;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+
+    .nav-btn {
+        text-align: center;
+        color: black;
+        padding: 20px;
+        @include vars.fontStyling(vars.$fontFamily, 14px, 600, black !important);
+        text-decoration: none;
+    }
+
+    .nav-btn-active {
+        background-color: vars.$color-4;
+        color: #ffffff !important;
+        border-radius: 10px;
+    }
+}
+
+.form-nav-tab-dropdown {
+    background-color: #E2E6F9;
+    margin-top: 2rem;
+    padding: 10px;
+    border-radius: 10px;
+
+    .nav-btn {
+        text-align: center;
+        color: black;
+        padding: 20px;
+        @include vars.fontStyling(vars.$fontFamily, 18px, 600, black !important);
+        text-decoration: none;
+    }
+
+    .nav-btn-active {
+        background-color: vars.$color-4;
+        color: #ffffff !important;
+        border-radius: 10px;
+    }
+}
+
+.offcanvas-bar {
+    background-color: #ffffff;
+    padding: 0;
+
+    .offcanvas-sidebar-nav {
+        ul.offcanvas-nav-list {
+            margin-top: 2rem;
+
+            li > a {
+                @include vars.fontStyling(vars.$fontFamily, 16px, 600, black);
+                padding: 10px;
+
+                span.las {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    background-color: vars.$color-3;
+                    color: #ffffff;
+                }
+            }
+
+            li.uk-parent {
+                ul.uk-nav-sub {
+                    li {
+                        padding-left: 30px;
+                        a {
+                            &:hover {
+                                background-color: transparent;
+                                color: vars.$color-3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-dropdown-nav {
+    border-radius: 10px;
+    padding: 5px;
+
+    .dropdown-nav {
+        li {
+            a {
+                padding: 10px;
+                color: black;
+                border-radius: 10px;
+                @include vars.fontStyling(vars.$fontFamily, 14px, 400, black);
+
+                &:hover {
+                    background-color: vars.$color-2;
+                    @include vars.fontStyling(vars.$fontFamily, 14px, 400, white);
+                }
+            }
+        }
+    }
+}

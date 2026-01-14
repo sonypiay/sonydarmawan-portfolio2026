@@ -1,0 +1,57 @@
+@use '../components/variables' as vars;
+
+.login-container {
+    background-color: vars.$main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .login-intro {
+        margin-bottom: 1.5rem;
+
+        .login-title {
+            @include vars.fontStyling(vars.$fontFamily !important, 24px, 700, black);
+        }
+
+        .login-subtitle {
+            @include vars.fontStyling(vars.$fontFamily !important, 16px, 400, black);
+        }
+    }
+
+    .login-form {
+        margin-top: 1rem;
+
+        .form-label-login {
+            @include vars.fontStyling(vars.$fontFamily !important, 16px, 700, black);
+        }
+        
+        .form-input-login {
+            @include vars.fontStyling(vars.$fontFamily !important, 16px, 400, black);
+            border-color: #000000 !important;
+            border-radius: 5px;
+            border-width: 2px;
+            padding: 1.2rem;
+
+            &:focus,
+            &:hover {
+                border-color: vars.$bg-primary!important;
+            }
+        }
+
+        .button-login {
+            border-radius: 5px;
+            padding: 5px;
+            background-color: vars.$color-2;
+            text-transform: none !important;
+            @include vars.fontStyling(vars.$fontFamily !important, 18px, 400, #ffffff);
+
+            &:hover {
+                background-color: vars.$color-1;
+            }
+        }
+    }
+}
+
+.login-card {
+    border-radius: 5px;
+}

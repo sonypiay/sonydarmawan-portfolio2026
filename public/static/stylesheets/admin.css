@@ -1,0 +1,360 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.form-label {
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 600;
+  color: #333333;
+  font-size: 16px;
+}
+
+.form-label-required:after {
+  content: " *";
+  color: red;
+}
+
+.form-text-info {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500;
+  color: #333333;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.form-input {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: #333333;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border-color: #B1B1B1 !important;
+}
+.form-input:focus, .form-input:hover {
+  border-color: #00A896 !important;
+  color: black;
+}
+
+.form-input-small {
+  padding: 0.5rem 1rem;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: black;
+  font-size: 12px;
+}
+
+.form-select {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px;
+  border-color: #B1B1B1 !important;
+  height: 50px !important;
+}
+.form-select:focus, .form-select:hover {
+  border-color: #00A896 !important;
+  color: black;
+}
+
+.form-select-small {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: black;
+  font-size: 13px;
+  height: 45px !important;
+}
+
+.button {
+  border-radius: 5px;
+  text-transform: none !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 500;
+  color: black;
+  font-size: 14px;
+}
+
+.button-default {
+  color: black;
+  border-color: #dddddd;
+}
+
+.button-primary {
+  color: white;
+  background-color: #1E87F0;
+}
+.button-primary:hover {
+  background-color: #00A896;
+}
+
+.button-danger {
+  color: white;
+  background-color: #ec4253;
+}
+.button-danger:hover {
+  background-color: #ec4253;
+}
+
+.login-container {
+  background-color: #1E87F0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-container .login-intro {
+  margin-bottom: 1.5rem;
+}
+.login-container .login-intro .login-title {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700;
+  color: black;
+  font-size: 24px;
+}
+.login-container .login-intro .login-subtitle {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: black;
+  font-size: 16px;
+}
+.login-container .login-form {
+  margin-top: 1rem;
+}
+.login-container .login-form .form-label-login {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 700;
+  color: black;
+  font-size: 16px;
+}
+.login-container .login-form .form-input-login {
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: black;
+  font-size: 16px;
+  border-color: #000000 !important;
+  border-radius: 5px;
+  border-width: 2px;
+  padding: 1.2rem;
+}
+.login-container .login-form .form-input-login:focus, .login-container .login-form .form-input-login:hover {
+  border-color: #3097D1 !important;
+}
+.login-container .login-form .button-login {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #1E87F0;
+  text-transform: none !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 18px;
+}
+.login-container .login-form .button-login:hover {
+  background-color: #3097D1;
+}
+
+.login-card {
+  border-radius: 5px;
+}
+
+.navbar-container {
+  background-color: #3097D1;
+}
+.navbar-container .navbar-profile-container {
+  text-decoration: none;
+}
+.navbar-container .navbar-profile-container .navbar-profile-info .nav-profile-name {
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: 16px;
+}
+.navbar-container .navbar-profile-container .navbar-profile-info .nav-profile-subname {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 14px;
+}
+.navbar-container .navbar-profile-container .navbar-icon-dropdown span {
+  margin-top: 0.1rem;
+  font-size: 20px;
+  color: black;
+}
+.navbar-container .navbar-dropdown {
+  border-radius: 0 0 5px 5px;
+  top: 80px !important;
+  border: none;
+  padding: 1rem;
+}
+.navbar-container .navbar-dropdown ul.nav-dropdown li > a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 14px;
+  padding: 6px 10px;
+  background-color: #3097D1;
+  border-radius: 5px;
+}
+.navbar-container .navbar-dropdown ul.nav-dropdown li > a:hover {
+  background-color: #1E87F0;
+}
+
+.sidebar-nav {
+  background-color: black;
+  border-right: 2px solid black;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.sidebar-nav ul.nav-list {
+  margin-top: 2rem;
+}
+.sidebar-nav ul.nav-list li > a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: white;
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.sidebar-nav ul.nav-list li > a span.las {
+  margin-right: 10px;
+}
+.sidebar-nav ul.nav-list li > a:hover {
+  background-color: #3097D1;
+  color: #ffffff;
+}
+.sidebar-nav ul.nav-list li.uk-parent ul.uk-nav-sub li {
+  padding-left: 30px;
+}
+.sidebar-nav ul.nav-list li.uk-parent ul.uk-nav-sub li a:hover {
+  background-color: transparent;
+  color: #3097D1;
+}
+
+ul.nav-pagination li > a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #dddddd;
+}
+ul.nav-pagination li > a:hover {
+  background-color: #00A896;
+  color: #ffffff;
+  border-color: #00A896;
+}
+ul.nav-pagination li > span {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black !important;
+  font-size: 14px;
+}
+ul.nav-pagination li.disabled > a {
+  background-color: transparent;
+  color: #999999;
+  border-color: #dddddd;
+}
+ul.nav-pagination li.disabled > a:hover {
+  background-color: transparent !important;
+}
+
+.form-nav-tab {
+  background-color: #E2E6F9;
+  margin-top: 2rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-nav-tab .nav-btn {
+  text-align: center;
+  color: black;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: black !important;
+  font-size: 14px;
+  text-decoration: none;
+}
+.form-nav-tab .nav-btn-active {
+  background-color: #02C39A;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.form-nav-tab-dropdown {
+  background-color: #E2E6F9;
+  margin-top: 2rem;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form-nav-tab-dropdown .nav-btn {
+  text-align: center;
+  color: black;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: black !important;
+  font-size: 18px;
+  text-decoration: none;
+}
+.form-nav-tab-dropdown .nav-btn-active {
+  background-color: #02C39A;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+
+.offcanvas-bar {
+  background-color: #ffffff;
+  padding: 0;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list {
+  margin-top: 2rem;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list li > a {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  padding: 10px;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list li > a span.las {
+  margin-right: 10px;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list li > a:hover {
+  background-color: #00A896;
+  color: #ffffff;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list li.uk-parent ul.uk-nav-sub li {
+  padding-left: 30px;
+}
+.offcanvas-bar .offcanvas-sidebar-nav ul.offcanvas-nav-list li.uk-parent ul.uk-nav-sub li a:hover {
+  background-color: transparent;
+  color: #00A896;
+}
+
+.table-dropdown-nav {
+  border-radius: 10px;
+  padding: 5px;
+}
+.table-dropdown-nav .dropdown-nav li a {
+  padding: 10px;
+  color: black;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 14px;
+}
+.table-dropdown-nav .dropdown-nav li a:hover {
+  background-color: #1E87F0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=admin.css.map */

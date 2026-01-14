@@ -3,8 +3,8 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "sass:watch": "sass resources/admin/app.scss:public/static/stylesheets/admin.css --watch",
-        "sass:build": "sass resources/admin/app.scss:public/static/stylesheets/admin.css --style=compressed --no-source-map"
+        "sass:watch": "sass resources/css/admin/app.scss:public/static/stylesheets/admin.css --watch --no-source-map",
+        "sass:build": "sass resources/css/admin/app.scss:public/static/stylesheets/admin.css --style=compressed --no-source-map"
     },
     "devDependencies": {
         "sass": "^1.97.2"

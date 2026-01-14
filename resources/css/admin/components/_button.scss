@@ -1,0 +1,30 @@
+@use 'variables' as vars;
+
+.button {
+    border-radius: 5px;
+    text-transform: none !important;
+    @include vars.fontStyling(vars.$fontFamily !important, 14px, 500, black);
+}
+
+.button-default {
+    color: black;
+    border-color: #dddddd;
+}
+
+.button-primary {
+    color: white;
+    background-color: vars.$color-2;
+
+    &:hover {
+        background-color: vars.$color-3;
+    }
+}
+
+.button-danger {
+    color: white;
+    background-color: vars.$bg-danger;
+
+    &:hover {
+        background-color: vars.$bg-danger;
+    }
+}

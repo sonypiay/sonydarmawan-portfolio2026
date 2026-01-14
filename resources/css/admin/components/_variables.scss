@@ -1,0 +1,35 @@
+$fontFamily: "Inter", sans-serif;
+
+$main-color: #1E87F0;
+$secondary-color: #181818;
+
+$color-1: #3097D1;
+$color-2: #1E87F0;
+$color-3: #00A896;
+$color-4: #02C39A;
+$color-5: #F0F3BD;
+
+$bg-primary: #3097D1;
+$bg-secondary: #1E87F0;
+$bg-success: #5bce74;
+$bg-danger: #ec4253;
+$bg-warning: #FAA05A;
+$bg-info: #138496;
+
+@mixin fontStyling($family, $size, $weight, $color) {
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin border-radius-small() { border-radius: 4px; }
+@mixin border-radius-medium() { border-radius: 6px; }
+@mixin border-radius-large() { border-radius: 10px; }
+@mixin border-radius-full() { border-radius: 100%; }
+  
+@mixin setTransition( $props, $time, $type, $delay ) {
+    transition: $props $time $type $delay;
+    -webkit-transition: $props $time $type $delay;
+    -moz-transition: $props $time $type $delay;
+}
