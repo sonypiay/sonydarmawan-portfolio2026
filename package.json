@@ -3,15 +3,10 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "vite build",
-        "dev": "vite"
+        "sass:watch": "sass resources/admin/app.scss:public/static/stylesheets/admin.css --watch",
+        "sass:build": "sass resources/admin/app.scss:public/static/stylesheets/admin.css --style=compressed --no-source-map"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.0.0",
-        "axios": "^1.11.0",
-        "concurrently": "^9.0.1",
-        "laravel-vite-plugin": "^2.0.0",
-        "tailwindcss": "^4.0.0",
-        "vite": "^7.0.7"
+        "sass": "^1.97.2"
     }
 }
