@@ -70,6 +70,15 @@
   height: 45px !important;
 }
 
+.form-is-invalid {
+  border-color: #ec4253 !important;
+  color: #ec4253 !important;
+}
+.form-is-invalid:focus, .form-is-invalid:hover {
+  border-color: #ec4253 !important;
+  color: black;
+}
+
 .button {
   border-radius: 5px;
   text-transform: none !important;
@@ -142,6 +151,14 @@
 }
 .login-container .login-form .form-input-login:focus, .login-container .login-form .form-input-login:hover {
   border-color: #3097D1 !important;
+}
+.login-container .login-form .form-login-invalid {
+  border-color: #ec4253 !important;
+  color: #ec4253 !important;
+}
+.login-container .login-form .form-login-invalid:focus, .login-container .login-form .form-login-invalid:hover {
+  border-color: #ec4253 !important;
+  color: black !important;
 }
 .login-container .login-form .button-login {
   border-radius: 5px;
@@ -356,5 +373,3 @@ ul.nav-pagination li.disabled > a:hover {
   color: white;
   font-size: 14px;
 }
-
-/*# sourceMappingURL=admin.css.map */

@@ -38,6 +38,17 @@
             }
         }
 
+        .form-login-invalid {
+            border-color: vars.$bg-danger !important;
+            color: vars.$bg-danger !important;
+        
+            &:focus,
+            &:hover {
+                border-color: vars.$bg-danger !important;
+                color: black !important;
+            }
+        }
+
         .button-login {
             border-radius: 5px;
             padding: 5px;

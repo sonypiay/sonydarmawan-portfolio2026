@@ -10,19 +10,42 @@
                     <div class="uk-text-center login-subtitle">Silahkan masuk menggunakan akun Anda</div>
                 </div>
 
-                <form class="uk-form-stacked login-form">
+                <form class="uk-form-stacked login-form" method="POST" action="{{ route('admin.auth.authenticate') }}">
+                    @csrf
+
+                    @session('login_error')
+                        <div class="uk-alert-danger" uk-alert>
+                            <a class="uk-alert-close" uk-close></a>
+                            <p>{{ $value }}</p>
+                        </div>
+                    @endsession
+
                     <div class="uk-margin">
                         <label for="i_email" class="uk-form-label form-label-login">Email</label>
                         <div class="uk-form-controls">
-                            <input id="i_email" class="uk-input form-input-login" type="email" placeholder="Masukkan email" required>
+                            <input 
+                                id="i_email" 
+                                name="email" 
+                                class="uk-input form-input-login @error('email') form-login-invalid @enderror" 
+                                type="text" 
+                                placeholder="Masukkan email"
+                                value="{{ old('email') }}">
                         </div>
+
+                        @error('email')
+                            <div class="uk-text-small uk-text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="uk-margin">
                         <label for="i_password" class="uk-form-label form-label-login">Password</label>
                         <div class="uk-form-controls">
-                            <input id="i_password" class="uk-input form-input-login" type="password" placeholder="Masukkan password" required>
+                            <input id="i_password" name="password" class="uk-input form-input-login @error('password') form-login-invalid @enderror" type="password" placeholder="Masukkan password">
                         </div>
+
+                        @error('password')
+                            <div class="uk-text-small uk-text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="uk-margin">

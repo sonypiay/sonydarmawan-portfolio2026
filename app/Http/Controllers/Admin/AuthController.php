@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
 {
@@ -34,6 +38,43 @@ class AuthController extends Controller
     }
 
     /**
+     * Login authentication
+     * 
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+        ], [
+            'email.required' => 'Email is required',
+            'password.required' => 'Password is required',
+        ]);
+
+        try {
+            $admin = Auth::guard('web')->attempt($credentials);
+
+            if( ! $admin ) {
+
+                Session::flash('login_error', 'Account not found');
+
+                return redirect()
+                    ->route('admin.auth.login')
+                    ->withInput();
+            }
+
+            $request->session()->regenerate();
+
+            Session::flash('toast_success', 'Login success');
+            return redirect()->route('admin.dashboard.index');
+        } catch(\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    /**
      * Logout
      *
      * @param \Illuminate\Http\Request $request
@@ -43,6 +84,6 @@ class AuthController extends Controller
     {
         $request->session()->forget('user');
 
-        return redirect()->route('system.auth.login');
+        return redirect()->route('admin.auth.logout');
     }
 }

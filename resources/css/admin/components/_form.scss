@@ -52,3 +52,14 @@
     @include vars.fontStyling(vars.$fontFamily !important, 13px, 400, black);
     height: 45px !important;
 }
+
+.form-is-invalid {
+    border-color: vars.$bg-danger !important;
+    color: vars.$bg-danger !important;
+
+    &:focus,
+    &:hover {
+        border-color: vars.$bg-danger !important;
+        color: black;
+    }
+}

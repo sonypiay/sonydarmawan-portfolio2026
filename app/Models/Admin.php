@@ -11,6 +11,7 @@ class Admin extends Authenticable
 
     public $incrementing = false;
     
+    protected $table = 'admin';
     protected $primaryKey = 'id';
     protected $keyType = 'string';
     protected $fillable = [
